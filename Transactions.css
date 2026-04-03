@@ -1,0 +1,324 @@
+.tx-container {
+    padding: 20px;
+    color: #e5e7eb;
+}
+
+/* HEADER */
+.tx-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.tx-header select {
+    background: #111827;
+    color: white;
+    border: 1px solid #374151;
+    padding: 6px;
+}
+
+.tx-header button {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+/* FILTERS */
+.filters {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.filters select {
+    padding: 6px;
+    background: #111827;
+    color: white;
+    border: 1px solid #374151;
+}
+
+/* TABLE */
+.tx-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111827;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tx-table th,
+.tx-table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.tx-table th {
+    color: #9ca3af;
+}
+
+/* 🔥 ROW COLORS */
+.row-safe td {
+    color: #34d399;
+}
+
+.row-high td {
+    color: #f87171;
+}
+
+.row-medium td {
+    color: #fbbf24;
+}
+
+/* STATUS COLORS */
+.approved {
+    color: #34d399;
+}
+
+.blocked {
+    color: #f87171;
+}
+
+/* HOVER */
+.tx-table tr:hover {
+    background: #1f2937;
+    cursor: pointer;
+}
+
+/* ================= MODAL ================= */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔥 MAIN MODAL */
+.modal-content {
+    background: #020617;
+    padding: 25px;
+    border-radius: 12px;
+    width: 500px;
+    color: white;
+    border: 1px solid #1f2937;
+
+    /* ✅ NEW */
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* SCROLLBAR */
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 10px;
+}
+
+/* HEADER */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* STATUS BADGE */
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-badge.approved {
+    background: rgba(34,197,94,0.15);
+    color: #22c55e;
+}
+
+.status-badge.blocked {
+    background: rgba(239,68,68,0.15);
+    color: #ef4444;
+}
+
+/* INFO GRID */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.info-grid label {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.info-grid span {
+    display: block;
+    font-weight: bold;
+}
+
+/* ================= RISK BAR ================= */
+
+.risk-section {
+    margin-top: 20px;
+}
+
+.risk-bar {
+    height: 12px;
+    background: #1f2937;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.risk-fill {
+    height: 100%;
+    border-radius: 6px;
+}
+
+.risk-fill.high {
+    background: linear-gradient(to right, #ef4444, #b91c1c);
+}
+
+.risk-fill.medium {
+    background: linear-gradient(to right, #facc15, #f59e0b);
+}
+
+.risk-fill.safe {
+    background: linear-gradient(to right, #22c55e, #16a34a);
+}
+
+/* ================= REASONS ================= */
+
+.reason-section {
+    margin-top: 20px;
+}
+
+.reason-item {
+    background: #111827;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border-left: 4px solid #374151;
+
+    /* ✅ NEW HOVER */
+    transition: 0.2s;
+}
+
+.reason-item:hover {
+    transform: translateX(5px);
+    border-left-color: #00c6ff;
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.approve-btn {
+    flex: 1;
+    background: #22c55e;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.block-btn {
+    flex: 1;
+    background: #ef4444;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.escalate-btn {
+    flex: 1;
+    background: #3b82f6;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+/* HOVER EFFECTS */
+.approve-btn:hover {
+    background: #16a34a;
+}
+
+.block-btn:hover {
+    background: #dc2626;
+}
+
+.escalate-btn:hover {
+    background: #2563eb;
+}
+
+/* CLICK EFFECT */
+.action-buttons button:active {
+    transform: scale(0.96);
+}
+
+/* CLOSE BUTTON */
+.modal-content .close-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: #374151;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-content .close-btn:hover {
+    background: #4b5563;
+}
+
+/* ===== OPTIONAL GLOW EFFECT ===== */
+.modal-content.high {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+}
+
+.modal-content.medium {
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.15);
+}
+
+.modal-content.safe {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.15);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}

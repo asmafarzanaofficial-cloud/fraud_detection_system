@@ -1,0 +1,85 @@
+.alerts-container {
+    padding: 20px;
+    color: #e5e7eb;
+}
+
+.alerts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.alerts-header h2 {
+    font-size: 22px;
+}
+
+.alerts-header button {
+    background: #111827;
+    color: #e5e7eb;
+    border: 1px solid #374151;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.alert-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111827;
+    border: 1px solid #1f2937;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.alert-card:hover {
+    transform: scale(1.01);
+    border-color: #374151;
+}
+
+/* LEFT SIDE */
+.alert-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.alert-id {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.alert-message {
+    font-size: 15px;
+}
+
+/* RIGHT SIDE */
+.alert-right .severity {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Severity Colors (subtle tech style) */
+.high .severity {
+    background: #3f1d1d;
+    color: #f87171;
+}
+
+.medium .severity {
+    background: #3f2f1d;
+    color: #fbbf24;
+}
+
+.low .severity {
+    background: #1d3f2f;
+    color: #34d399;
+}
+
+.no-alerts {
+    color: #9ca3af;
+}

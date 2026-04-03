@@ -1,0 +1,71 @@
+.ml-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.metric-card {
+  background: #111827;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  border-left: 4px solid #3b82f6;
+  transition: 0.3s;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  border-color: #60a5fa;
+}
+
+.metric-card b {
+  display: block;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.ml-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.ml-chart {
+  background: #111827;
+  padding: 20px;
+  border-radius: 12px;
+  height: 300px;
+}
+
+.ml-chart h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.ml-chart canvas {
+  height: 220px !important;
+}
+
+.ml-confusion {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.conf-card {
+  background: #111827;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  border-left: 4px solid #374151;
+}
+
+.conf-card b {
+  display: block;
+  margin-top: 5px;
+  font-size: 18px;
+}
